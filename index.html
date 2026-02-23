@@ -162,6 +162,302 @@ footer{
         grid-template-columns:repeat(3,1fr);
     }
 }
+
+/* ===== SLIDESHOW ===== */
+
+.slideshow {
+    max-width: 100%;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXT NẰM DƯỚI ẢNH */
+.slide-text {
+    background: #f4f4f4;
+    padding: 25px;
+}
+
+.slide-text h3 {
+    margin-bottom: 15px;
+    color: #4b1f1f;
+}
+
+.slide-text p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Nút và dots */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slideshow { position: relative; }
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.dots {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.dots span {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots span.active {
+    background: #8b5a2b;
+}
+
+@media(max-width:768px){
+    .slide img{
+        height:220px;
+    }
+}
+
+/* CONTACT PAGE */
+
+.contact-wrapper{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    flex:1;
+    min-width:300px;
+}
+
+.contact-info h3,
+.contact-form h3{
+    margin-bottom:15px;
+    color:#4b1f1f;
+}
+
+.contact-info p{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+}
+
+.contact-form button{
+    width:100%;
+    padding:10px;
+    background:#4b1f1f;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#8b5a2b;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .contact-wrapper{
+        flex-direction:column;
+    }
+}
+
+/* GIA CÔNG */
+
+.service-intro{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.service-box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.service-box h3{
+    margin-bottom:10px;
+    color:#4b1f1f;
+}
+
+.process-section{
+    margin-bottom:25px;
+}
+
+.process-steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.process-steps div{
+    background:#8b5a2b;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.commitment{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+.commitment ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.commitment li{
+    margin-bottom:8px;
+}
+
+.service-form{
+    margin-top:20px;
+}
+
+/* HERO OVERLAY */
+.slide-overlay{
+    position:absolute;
+    bottom:40px;
+    left:40px;
+    color:white;
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:8px;
+    max-width:500px;
+}
+
+.slide-overlay h2{
+    margin-bottom:10px;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#8b5a2b;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.hero-btn:hover{
+    background:#4b1f1f;
+}
+
+/* INTRO */
+.home-intro{
+    text-align:center;
+    margin:50px 0 30px;
+}
+
+.home-intro h3{
+    color:#4b1f1f;
+    margin-bottom:15px;
+}
+
+.home-intro p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+}
+
+/* SERVICES */
+.home-services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+.home-box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.home-box h4{
+    margin-bottom:10px;
+    color:#4b1f1f;
+}
+
+/* COMMITMENT */
+.home-commit{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin:40px 0 60px;
+}
+
+.home-commit div{
+    background:#f8f8f8;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
 </style>
 </head>
 
@@ -170,7 +466,7 @@ footer{
 <header>
     <img src="banner.png" alt="DT INOX INTERIOR">
     <h1>DT INOX INTERIOR</h1>
-    <p>Linh kiện inox & Gia công theo yêu cầu</p>
+    <p>Inox nội thất và các mặt hàng gia dụng cao cấp</p>
 </header>
 
 <nav>
@@ -183,10 +479,111 @@ footer{
 <!-- HOME -->
 <div id="home" class="tab-content active">
     <div class="container">
-        <h2 class="section-title">TRANG CHỦ</h2>
-        <p style="text-align:center">
-            Chuyên cung cấp linh kiện inox, gia công inox dân dụng & công nghiệp tại Gia Kiệm - Đồng Nai.
-        </p>
+
+        <!-- HERO / SLIDESHOW -->
+        <div class="slideshow">
+
+            <div class="slide active">
+                <img src="IMG/trang chu/1.jpg">
+                <div class="slide-overlay">
+                    <h2>VẬT TƯ INOX CHẤT LƯỢNG CAO</h2>
+                    <p>Giải pháp bền vững cho mọi công trình dân dụng & công nghiệp.</p>
+                    <a href="#" onclick="showTab(event,'contact')" class="hero-btn">Liên hệ ngay</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="IMG/trang chu/2.jpg">
+                <div class="slide-overlay">
+                    <h2>INOX GIA DỤNG CAO CẤP</h2>
+                    <p>An toàn thực phẩm – Độ bền vượt trội – Dễ vệ sinh.</p>
+                    <a href="#" onclick="showTab(event,'contact')" class="hero-btn">Liên hệ ngay</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="IMG/trang chu/3.jpg">
+                <div class="slide-overlay">
+                    <h2>INOX MÀU PVD TRANG TRÍ</h2>
+                    <p>Nâng tầm không gian showroom – khách sạn – nội thất cao cấp.</p>
+                    <a href="#" onclick="showTab(event,'contact')" class="hero-btn">Liên hệ ngay</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="IMG/trang chu/4.jpg">
+                <div class="slide-overlay">
+                    <h2>NGUỒN CUNG ỔN ĐỊNH</h2>
+                    <p>Đáp ứng sản xuất quy mô lớn – Giao hàng đúng tiến độ.</p>
+                    <a href="#" onclick="showTab(event,'contact')" class="hero-btn">Liên hệ ngay</a>
+                </div>
+            </div>
+
+            <div class="prev" onclick="changeSlide(-1)">❮</div>
+            <div class="next" onclick="changeSlide(1)">❯</div>
+
+            <div class="dots">
+                <span onclick="currentSlide(0)" class="active"></span>
+                <span onclick="currentSlide(1)"></span>
+                <span onclick="currentSlide(2)"></span>
+                <span onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+
+        <!-- GIỚI THIỆU -->
+        <div class="home-intro">
+            <h3>DT INOX INTERIOR – Giải pháp inox toàn diện</h3>
+            <p>
+                Chúng tôi chuyên cung cấp vật tư inox 201 – 304 – 316, nhận gia công theo bản vẽ
+                và thi công công trình inox tại Gia Kiệm – Đồng Nai và khu vực lân cận.
+                Cam kết chất lượng, độ chính xác và tiến độ.
+            </p>
+        </div>
+
+        <!-- DỊCH VỤ NỔI BẬT -->
+        <div class="home-services">
+            <div class="home-box">
+                <h4>Cung cấp vật tư inox</h4>
+                <p>Ống, hộp, cuộn, thanh la, phụ kiện cơ khí.</p>
+            </div>
+
+            <div class="home-box">
+                <h4>Gia công theo yêu cầu</h4>
+                <p>Cắt – hàn – chấn – đánh bóng inox chính xác.</p>
+            </div>
+
+            <div class="home-box">
+                <h4>Thi công công trình</h4>
+                <p>Lan can, cầu thang, cửa cổng inox.</p>
+            </div>
+
+            <div class="home-box">
+                <h4>Inox trang trí cao cấp</h4>
+                <p>Inox màu PVD cho nội thất & showroom.</p>
+            </div>
+        </div>
+
+        <!-- CAM KẾT -->
+        <div class="home-commit">
+            <div>
+                <h4>Chất lượng đảm bảo</h4>
+                <p>Vật liệu đạt chuẩn – Gia công chính xác.</p>
+            </div>
+            <div>
+                <h4>Giá cả cạnh tranh</h4>
+                <p>Báo giá minh bạch – Tối ưu chi phí.</p>
+            </div>
+            <div>
+                <h4>Hỗ trợ kỹ thuật</h4>
+                <p>Tư vấn tận tình – Hỗ trợ nhanh chóng.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
     </div>
 </div>
 
@@ -195,27 +592,11 @@ footer{
     <div class="container">
         <h2 class="section-title">SẢN PHẨM INOX</h2>
 
-        <div class="products" id="productList">
+        <!-- JS sẽ render sản phẩm vào đây -->
+        <div class="products" id="productList"></div>
 
-            <!-- 13 sản phẩm -->
-            <script>
-                for(let i=1;i<=13;i++){
-                    document.write(`
-                    <div class="product">
-                        <img src="https://via.placeholder.com/300x200">
-                        <h3>Sản phẩm Inox ${i}</h3>
-                        <p>Gia công theo yêu cầu</p>
-                    </div>
-                    `);
-                }
-            </script>
-
-        </div>
-
-        <div class="pagination">
-            <button onclick="changePage(1)" id="page1" class="active">1</button>
-            <button onclick="changePage(2)" id="page2">2</button>
-        </div>
+        <!-- JS sẽ tự tạo nút phân trang vào đây -->
+        <div class="pagination"></div>
 
     </div>
 </div>
@@ -224,7 +605,63 @@ footer{
 <div id="gia-cong" class="tab-content">
     <div class="container">
         <h2 class="section-title">GIA CÔNG THEO YÊU CẦU</h2>
-        <div class="contact">
+
+        <!-- Giới thiệu -->
+        <div class="service-intro">
+            <p>
+                DT INOX INTERIOR chuyên nhận gia công inox dân dụng và công nghiệp theo bản vẽ, kích thước và yêu cầu kỹ thuật riêng của khách hàng. 
+                Với đội ngũ thợ lành nghề và quy trình sản xuất bài bản, chúng tôi đảm bảo chất lượng, độ chính xác và tính thẩm mỹ cao cho từng sản phẩm.
+            </p>
+        </div>
+
+        <!-- Danh sách dịch vụ -->
+        <div class="service-grid">
+            <div class="service-box">
+                <h3>Gia công cơ khí inox</h3>
+                <p>Cắt – chấn – hàn – đánh bóng inox theo yêu cầu.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Thi công công trình</h3>
+                <p>Lan can, cầu thang, cửa cổng, mái che inox.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Inox nội thất</h3>
+                <p>Bàn, tủ, kệ, thiết bị bếp inox công nghiệp.</p>
+            </div>
+
+            <div class="service-box">
+                <h3>Gia công inox màu</h3>
+                <p>Mạ PVD, inox trang trí cao cấp cho showroom – khách sạn.</p>
+            </div>
+        </div>
+
+        <!-- Quy trình làm việc -->
+        <div class="process-section">
+            <h3>Quy trình làm việc</h3>
+            <div class="process-steps">
+                <div>1. Tiếp nhận yêu cầu & tư vấn</div>
+                <div>2. Báo giá & xác nhận bản vẽ</div>
+                <div>3. Gia công sản xuất</div>
+                <div>4. Giao hàng & nghiệm thu</div>
+            </div>
+        </div>
+
+        <!-- Cam kết -->
+        <div class="commitment">
+            <h3>Cam kết của chúng tôi</h3>
+            <ul>
+                <li>✔ Sử dụng inox 201 – 304 – 316 đúng tiêu chuẩn</li>
+                <li>✔ Gia công chính xác, đúng tiến độ</li>
+                <li>✔ Giá cả cạnh tranh, minh bạch</li>
+                <li>✔ Hỗ trợ kỹ thuật tận nơi</li>
+            </ul>
+        </div>
+
+        <!-- Form -->
+        <div class="contact service-form">
+            <h3>Gửi yêu cầu gia công</h3>
             <form>
                 <input type="text" placeholder="Họ và tên" required>
                 <input type="tel" placeholder="Số điện thoại" required>
@@ -232,6 +669,7 @@ footer{
                 <button type="submit">Gửi yêu cầu</button>
             </form>
         </div>
+
     </div>
 </div>
 
@@ -239,8 +677,37 @@ footer{
 <div id="contact" class="tab-content">
     <div class="container">
         <h2 class="section-title">LIÊN HỆ</h2>
-        <p style="text-align:center">Hotline: 09xx.xxx.xxx</p>
-        <p style="text-align:center">Địa chỉ: Gia Kiệm - Đồng Nai</p>
+
+        <div class="contact-wrapper">
+
+            <!-- Thông tin công ty -->
+            <div class="contact-info">
+                <h3>DT INOX INTERIOR</h3>
+
+                <p><strong>Hotline:</strong> 09xx.xxx.xxx</p>
+                <p><strong>Email:</strong> dtinox@gmail.com</p>
+                <p><strong>Địa chỉ:</strong> Gia Kiệm - Đồng Nai</p>
+                <p><strong>Giờ làm việc:</strong> 7:30 - 17:30 (Thứ 2 - Thứ 7)</p>
+
+                <div class="social">
+                    <p><strong>Kết nối với chúng tôi:</strong></p>
+                    <p>Facebook | Zalo | Website</p>
+                </div>
+            </div>
+
+            <!-- Form liên hệ -->
+            <div class="contact-form">
+                <h3>Gửi yêu cầu tư vấn</h3>
+                <form>
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="tel" placeholder="Số điện thoại" required>
+                    <input type="email" placeholder="Email">
+                    <textarea rows="4" placeholder="Nội dung yêu cầu..."></textarea>
+                    <button type="submit">Gửi thông tin</button>
+                </form>
+            </div>
+
+        </div>
     </div>
 </div>
 
@@ -261,30 +728,110 @@ function showTab(event,tabId){
     event.target.classList.add("active");
 }
 
-/* PAGINATION */
-let itemsPerPage = 9;
-let products;
+</script>
+
+
+
+<script>
+let slideIndex = 0;
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dots span");
+
+function showSlide(index){
+    slides.forEach(s=>s.classList.remove("active"));
+    dots.forEach(d=>d.classList.remove("active"));
+
+    slideIndex = (index + slides.length) % slides.length;
+
+    slides[slideIndex].classList.add("active");
+    dots[slideIndex].classList.add("active");
+}
+
+function changeSlide(n){
+    showSlide(slideIndex + n);
+}
+
+function currentSlide(n){
+    showSlide(n);
+}
+
+setInterval(()=>{ changeSlide(1); },4000);
+</script>
+
+<script>
 document.addEventListener("DOMContentLoaded", function(){
-    products = document.querySelectorAll("#productList .product");
-    showPage(1);
+
+    const productData = [
+        { name: "Ống inox 304", image: "IMG/san pham/1.jpg", desc: "Chống gỉ sét, độ bền cao" },
+        { name: "Hộp inox 201", image: "IMG/san pham/2.jpg", desc: "Thi công dân dụng" },
+        { name: "Thanh la inox", image: "IMG/san pham/3.jpg", desc: "Đa dạng kích thước" },
+        { name: "Cuộn inox", image: "IMG/san pham/4.jpg", desc: "Nguồn hàng ổn định" },
+        { name: "Inox màu PVD", image: "IMG/san pham/5.jpg", desc: "Trang trí cao cấp" },
+        { name: "Lan can inox", image: "IMG/san pham/6.jpg", desc: "Gia công theo yêu cầu" },
+        { name: "Kệ inox", image: "IMG/san pham/7.jpg", desc: "Thiết kế chắc chắn" },
+        { name: "Bàn inox", image: "IMG/san pham/8.jpg", desc: "Inox 304 chuẩn" },
+        { name: "Tủ inox", image: "IMG/san pham/9.jpg", desc: "Chống oxy hóa" },
+        { name: "abc", image: "IMG/san pham/9.jpg", desc: "abc" }
+    ];
+
+    const productList = document.getElementById("productList");
+    const pagination = document.querySelector(".pagination");
+
+    const itemsPerPage = 9;
+    let currentPage = 1;
+
+    function renderProducts(page){
+        productList.innerHTML = "";
+
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const items = productData.slice(start, end);
+
+        items.forEach(product => {
+            const itemHTML = `
+                <div class="product">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.desc}</p>
+                </div>
+            `;
+            productList.insertAdjacentHTML("beforeend", itemHTML);
+        });
+    }
+
+    function setupPagination(){
+        pagination.innerHTML = "";
+        const pageCount = Math.ceil(productData.length / itemsPerPage);
+
+        for(let i = 1; i <= pageCount; i++){
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.id = "page" + i;
+
+            btn.addEventListener("click", function(){
+                changePage(i);
+            });
+
+            pagination.appendChild(btn);
+        }
+    }
+
+    function changePage(page){
+        currentPage = page;
+        renderProducts(page);
+
+        document.querySelectorAll(".pagination button")
+            .forEach(btn => btn.classList.remove("active"));
+
+        const activeBtn = document.getElementById("page" + page);
+        if(activeBtn) activeBtn.classList.add("active");
+    }
+
+    // khởi tạo
+    setupPagination();
+    changePage(1);
+
 });
-
-function showPage(page){
-    let start = (page-1)*itemsPerPage;
-    let end = start + itemsPerPage;
-
-    products.forEach((item,index)=>{
-        item.style.display = (index>=start && index<end) ? "block" : "none";
-    });
-
-    document.querySelectorAll(".pagination button").forEach(b=>b.classList.remove("active"));
-    document.getElementById("page"+page).classList.add("active");
-}
-
-function changePage(page){
-    showPage(page);
-}
-
 </script>
 
 </body>
